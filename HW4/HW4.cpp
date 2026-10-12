@@ -88,13 +88,11 @@ Mat erosion(const Mat& src){
     return dst;
 }
 
-Mat opening(const Mat& src)
-{
+Mat opening(const Mat& src){
     return dilation(erosion(src));
 }
 
-Mat closing(const Mat& src)
-{
+Mat closing(const Mat& src){
     return erosion(dilation(src));
 }
 
